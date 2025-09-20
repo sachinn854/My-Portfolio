@@ -8,7 +8,7 @@ const Hero = () => {
   const [subtitleRef, subtitleVisible] = useTextReveal();
 
   // 👉 Change this path to your image path
-  const profileImage = "public/photo_2025-09-20_14-26-19.jpg"; 
+  const profileImage = "/photo_2025-09-20_14-26-19.jpg"; 
   // (put your image inside /public/images/ folder in Next.js or React project)
 
   const scrollToSection = (sectionId: string) => {
