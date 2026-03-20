@@ -13,124 +13,136 @@ const About = () => {
       {/* Background decorations */}
       <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-r from-purple-500/20 to-orange-500/20 rounded-full blur-3xl opacity-60"></div>
       <div className="absolute bottom-20 left-20 w-40 h-40 bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-full blur-3xl opacity-60"></div>
-      
+
       <div className="container mx-auto px-6 relative z-10">
-        <div 
+        <div
           ref={titleRef}
-          className={`text-center mb-20 transition-all duration-1000 ${
-            titleVisible ? 'animate-fade-in' : 'opacity-0'
-          }`}
+          className={`text-center mb-20 transition-all duration-1000 ${titleVisible ? 'animate-fade-in' : 'opacity-0'
+            }`}
         >
           <div className="inline-flex items-center gap-2 px-6 py-3 glass-card rounded-full shadow-sm mb-6 hover:glass-card-elevated transition-all duration-300">
             <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
             <span className="text-sm font-medium text-white/90 tracking-wide">ABOUT ME</span>
           </div>
-          <h2 className="text-5xl font-bold text-white mb-6">
-            Designing Solutions, 
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+            Designing Solutions,
             <span className="bg-gradient-to-r from-purple-400 to-orange-400 bg-clip-text text-transparent"> Not Just Code</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-orange-400 mx-auto rounded-full"></div>
+          <div className="w-12 h-[2px] bg-white/10 mx-auto rounded-full"></div>
         </div>
-        
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div 
+
+        <div className="grid lg:grid-cols-12 gap-12 items-start">
+          {/* Left Side: Bio & Education/Expertise */}
+          <div
             ref={contentRef}
-            className={`space-y-8 transition-all duration-1000 ${
-              contentVisible ? 'animate-slide-in-left' : 'opacity-0'
-            }`}
+            className={`lg:col-span-5 space-y-10 transition-all duration-1000 ${contentVisible ? 'animate-slide-in-left' : 'opacity-0'
+              }`}
           >
             <div className="space-y-6">
-              <p className="text-xl text-gray-300 leading-relaxed font-light">
-                I'm a passionate B.Tech Computer Science student at IIITDM Kancheepuram, currently in my journey towards becoming a skilled data scientist and machine learning engineer.
+              <p className="text-lg text-gray-400 leading-relaxed font-medium">
+                I am an <span className="text-white">AI & Machine Learning Engineer</span> dedicated to building intelligent systems that bridge the gap between complex data and real-world impact.
               </p>
-              
-              <p className="text-lg text-gray-400 leading-relaxed">
-                With a strong foundation in programming and a curiosity for data-driven insights, I'm constantly exploring new ways to solve real-world problems through technology. My focus lies in transforming raw data into meaningful stories and building intelligent systems.
+              <p className="text-base text-gray-500 leading-relaxed font-medium">
+                Specializing in <span className="text-purple-400">Deep Learning & RAG architectures</span>, I engineer robust solutions that transform raw complexity into scalable innovation.
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 gap-6">
-              <div className="group glass-card rounded-3xl p-8 shadow-lg hover:glass-card-elevated hover-lift transition-all duration-500 border-l-4 border-purple-500/50">
-                <div className="flex items-center space-x-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-3xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-500/25 hover-glow">
-                    <GraduationCap className="w-8 h-8 text-white" />
+
+            <div className="grid gap-6">
+              <div className="group relative overflow-hidden glass-card rounded-3xl p-6 transition-all duration-500 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] border-t border-white/10">
+                <div className="flex items-center space-x-5">
+                  <div className="w-14 h-14 bg-gradient-to-br from-purple-500/20 to-purple-600/40 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.2)]">
+                    <GraduationCap className="w-7 h-7 text-purple-300" />
                   </div>
-                  <div className="flex-1">
-                    <h4 className="font-bold text-white text-xl mb-1">Education</h4>
-                    <p className="text-gray-300 text-lg">B.Tech CSE, IIITDM Kancheepuram</p>
-                    <p className="text-sm text-purple-400 font-medium mt-2 px-3 py-1 bg-purple-500/20 rounded-full inline-block">Expected 2027</p>
+                  <div>
+                    <h4 className="font-bold text-white text-sm uppercase tracking-wider">Education</h4>
+                    <p className="text-gray-500 text-xs font-medium">B.Tech CSE, IIITDM Kancheepuram</p>
                   </div>
                 </div>
               </div>
-              
-              <div className="group glass-card rounded-3xl p-8 shadow-lg hover:glass-card-elevated hover-lift transition-all duration-500 border-l-4 border-orange-500/50">
-                <div className="flex items-center space-x-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-orange-500/25 hover-glow">
-                    <Target className="w-8 h-8 text-white" />
+
+              <div className="group relative overflow-hidden glass-card rounded-3xl p-6 transition-all duration-500 hover:shadow-[0_0_30px_rgba(249,115,22,0.15)] border-t border-white/10">
+                <div className="flex items-center space-x-5">
+                  <div className="w-14 h-14 bg-gradient-to-br from-orange-500/20 to-orange-600/40 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-orange-500/30 shadow-[0_0_15px_rgba(249,115,22,0.2)]">
+                    <Target className="w-7 h-7 text-orange-300" />
                   </div>
-                  <div className="flex-1">
-                    <h4 className="font-bold text-white text-xl mb-1">Focus Areas</h4>
-                    <p className="text-gray-300 text-lg">Data Analytics & Machine Learning</p>
-                    <p className="text-sm text-orange-400 font-medium mt-2 px-3 py-1 bg-orange-500/20 rounded-full inline-block">Future ML Engineer</p>
+                  <div>
+                    <h4 className="font-bold text-white text-sm uppercase tracking-wider">Expertise</h4>
+                    <p className="text-gray-500 text-xs font-medium">LLMs, RAG & Neural Networks</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          
-          <div 
-            ref={statsRef} 
-            className={`grid grid-cols-2 gap-8 transition-all duration-1000 ease-out ${
-              statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
+
+          {/* Right Side: Stats Grid */}
+          <div
+            ref={statsRef}
+            className={`lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 transition-all duration-1000 ease-out delay-200 ${statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
           >
-            <div className="glass-card-elevated rounded-3xl p-8 text-white text-center hover-lift hover-glow transition-all duration-500 relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="relative z-10">
-                <div className="w-14 h-14 bg-gradient-to-br from-purple-500/30 to-purple-600/30 rounded-2xl flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
-                  <Code className="w-7 h-7 text-purple-400" />
+            {[
+              {
+                icon: Code,
+                title: "400+",
+                label: "LeetCode Knight",
+                sub: "1858 Max Rating",
+                color: "purple",
+                accent: "bg-purple-500/10 group-hover:bg-purple-500/20",
+                iconBg: "from-purple-500/20 to-purple-600/20 border-purple-500/20",
+                iconColor: "text-purple-400",
+                titleGradient: "from-purple-400 to-purple-200"
+              },
+              {
+                icon: Trophy,
+                title: "10+",
+                label: "AI/ML Projects",
+                sub: "Deployed & Scalable",
+                color: "orange",
+                accent: "bg-orange-500/10 group-hover:bg-orange-500/20",
+                iconBg: "from-orange-500/20 to-orange-600/20 border-orange-500/20",
+                iconColor: "text-orange-400",
+                titleGradient: "from-orange-400 to-orange-200"
+              },
+              {
+                icon: BookOpen,
+                title: "4+",
+                label: "Core Tech Stack",
+                sub: "Python, C++, SQL",
+                color: "blue",
+                accent: "bg-blue-500/10 group-hover:bg-blue-500/20",
+                iconBg: "from-blue-500/20 to-blue-600/20 border-blue-500/20",
+                iconColor: "text-blue-400",
+                titleGradient: "from-blue-400 to-blue-200"
+              },
+              {
+                icon: Award,
+                title: "Top 5%",
+                label: "Amazon ML '25",
+                sub: "Kaggle Rank 44",
+                color: "emerald",
+                accent: "bg-emerald-500/10 group-hover:bg-emerald-500/20",
+                iconBg: "from-emerald-500/20 to-emerald-600/20 border-emerald-500/20",
+                iconColor: "text-emerald-400",
+                titleGradient: "from-emerald-400 to-emerald-200"
+              }
+            ].map((stat, idx) => (
+              <div
+                key={idx}
+                className="group glass-card-elevated rounded-[2.5rem] p-8 text-center hover:bg-white/5 transition-all duration-500 hover:-translate-y-2 border border-white/5 hover:border-white/20 relative overflow-hidden"
+              >
+                <div className={`absolute -right-4 -top-4 w-24 h-24 rounded-full blur-2xl transition-all duration-500 ${stat.accent}`}></div>
+                <div className="relative z-10">
+                  <div className={`w-16 h-16 bg-gradient-to-br rounded-2xl flex items-center justify-center mx-auto mb-6 border group-hover:scale-110 transition-all duration-500 shadow-lg ${stat.iconBg}`}>
+                    <stat.icon className={`w-8 h-8 ${stat.iconColor}`} />
+                  </div>
+                  <div className="text-4xl font-bold text-white mb-1 tracking-tighter">
+                    {stat.title}
+                  </div>
+                  <div className="font-bold text-gray-500 tracking-[0.1em] mb-1 uppercase text-[10px]">{stat.label}</div>
+                  <div className="text-gray-600 text-xs font-medium">{stat.sub}</div>
                 </div>
-                <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-purple-300 bg-clip-text text-transparent">300+</div>
-                <div className="font-semibold text-white/90 mb-1">LeetCode Problems</div>
-                <div className="text-sm text-gray-400">Solved & Learning</div>
               </div>
-            </div>
-            
-            <div className="glass-card-elevated rounded-3xl p-8 text-white text-center hover-lift hover-glow transition-all duration-500 relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-orange-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="relative z-10">
-                <div className="w-14 h-14 bg-gradient-to-br from-orange-500/30 to-orange-600/30 rounded-2xl flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
-                  <Trophy className="w-7 h-7 text-orange-400" />
-                </div>
-                <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-orange-400 to-orange-300 bg-clip-text text-transparent">5+</div>
-                <div className="font-semibold text-white/90 mb-1">Personal Projects</div>
-                <div className="text-sm text-gray-400">Completed</div>
-              </div>
-            </div>
-            
-            <div className="glass-card-elevated rounded-3xl p-8 text-white text-center hover-lift hover-glow transition-all duration-500 relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="relative z-10">
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-500/30 to-purple-600/30 rounded-2xl flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
-                  <BookOpen className="w-7 h-7 text-blue-400" />
-                </div>
-                <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">3+</div>
-                <div className="font-semibold text-white/90 mb-1">Programming Languages</div>
-                <div className="text-sm text-gray-400">Proficient</div>
-              </div>
-            </div>
-            
-            <div className="glass-card-elevated rounded-3xl p-8 text-white text-center hover-lift hover-glow transition-all duration-500 relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="relative z-10">
-                <div className="w-14 h-14 bg-gradient-to-br from-emerald-500/30 to-blue-600/30 rounded-2xl flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
-                  <Award className="w-7 h-7 text-emerald-400" />
-                </div>
-                <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">2027</div>
-                <div className="font-semibold text-white/90 mb-1">Graduation Goal</div>
-                <div className="text-sm text-gray-400">Ready to Impact</div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

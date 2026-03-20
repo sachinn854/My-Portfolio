@@ -44,11 +44,11 @@ All colors MUST be HSL.
     --dark-bg-tertiary: 180 20% 12%;
     --dark-surface: 180 15% 15%;
     --dark-surface-elevated: 180 10% 18%;
-    
+
     /* Glass morphism */
     --glass-bg: 180 20% 12%;
     --glass-border: 180 30% 25%;
-    
+
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(271 91% 65%) 0%, hsl(25 95% 53%) 100%);
     --gradient-secondary: linear-gradient(135deg, hsl(180 100% 25%) 0%, hsl(271 91% 65%) 100%);
@@ -113,126 +113,127 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+
   /* Modern glassmorphism utilities */
   .glass-card {
     background: hsla(var(--glass-bg), 0.1);
     backdrop-filter: blur(20px);
     border: 1px solid hsla(var(--glass-border), 0.2);
-    box-shadow: 
+    box-shadow:
       0 8px 32px hsla(0, 0%, 0%, 0.1),
       inset 0 1px 0 hsla(0, 0%, 100%, 0.1);
   }
-  
+
   .glass-card-elevated {
     background: hsla(var(--glass-bg), 0.15);
     backdrop-filter: blur(24px);
     border: 1px solid hsla(var(--glass-border), 0.3);
-    box-shadow: 
+    box-shadow:
       0 20px 60px hsla(0, 0%, 0%, 0.2),
       0 8px 32px hsla(0, 0%, 0%, 0.1),
       inset 0 1px 0 hsla(0, 0%, 100%, 0.1);
   }
-  
+
   /* Enhanced professional scroll animations */
   .animate-fade-in {
     animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
-  
+
   .animate-fade-in.delay-100 {
     opacity: 0;
     animation-delay: 0.1s;
   }
-  
+
   .animate-fade-in.delay-200 {
     opacity: 0;
     animation-delay: 0.2s;
   }
-  
+
   .animate-fade-in.delay-300 {
     opacity: 0;
     animation-delay: 0.3s;
   }
-  
+
   .animate-fade-in.delay-500 {
     opacity: 0;
     animation-delay: 0.5s;
   }
-  
+
   .animate-slide-up {
     animation: slideUp 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
-  
+
   .animate-slide-in-left {
     animation: slideInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
-  
+
   .animate-slide-in-right {
     animation: slideInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
-  
+
   .animate-scale-up {
     animation: scaleUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
-  
+
   .animate-scale-x-100 {
     animation: scaleX 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
-  
+
   /* Text reveal animations */
   .animate-text-reveal {
     animation: textReveal 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
-  
+
   .animate-text-slide-up {
     animation: textSlideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
-  
+
   /* Enhanced floating for hero elements */
   .animate-gentle-float {
     animation: gentleFloat 3s ease-in-out infinite;
   }
-  
+
   .animate-gentle-float.delay-500 {
     animation-delay: 0.5s;
   }
-  
+
   .animate-gentle-float.delay-1000 {
     animation-delay: 1s;
   }
-  
+
   /* Profile rotation animation */
   .animate-profile-rotate {
     animation: profileRotate 2s ease-out;
   }
-  
+
   /* Parallax effects */
   .parallax-slow {
     transform: translateY(var(--parallax-offset, 0));
   }
-  
+
   /* Staggered reveal */
   .animate-stagger-in {
     animation: staggerIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
-  
+
   /* Modern hover effects */
   .hover-lift {
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
-  
+
   .hover-lift:hover {
     transform: translateY(-8px);
-    box-shadow: 
+    box-shadow:
       0 20px 60px hsla(0, 0%, 0%, 0.15),
       0 8px 32px hsla(0, 0%, 0%, 0.1);
   }
-  
+
   .hover-glow {
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
-  
+
   .hover-glow:hover {
-    box-shadow: 
+    box-shadow:
       0 0 30px hsla(271, 91%, 65%, 0.3),
       0 0 60px hsla(25, 95%, 53%, 0.2);
   }
@@ -242,7 +243,7 @@ All colors MUST be HSL.
     position: relative;
     transition: all 0.3s ease;
   }
-  
+
   .nav-glow::before {
     content: '';
     position: absolute;
@@ -253,7 +254,7 @@ All colors MUST be HSL.
     transition: opacity 0.3s ease;
     pointer-events: none;
   }
-  
+
   .nav-glow:hover::before {
     opacity: 1;
   }
@@ -265,6 +266,7 @@ All colors MUST be HSL.
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -276,6 +278,7 @@ All colors MUST be HSL.
     opacity: 0;
     transform: translateY(60px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -287,6 +290,7 @@ All colors MUST be HSL.
     opacity: 0;
     transform: translateX(-60px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -298,6 +302,7 @@ All colors MUST be HSL.
     opacity: 0;
     transform: translateX(60px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -309,6 +314,7 @@ All colors MUST be HSL.
     opacity: 0;
     transform: scale(0.8);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -319,6 +325,7 @@ All colors MUST be HSL.
   from {
     transform: scaleX(0);
   }
+
   to {
     transform: scaleX(1);
   }
@@ -331,6 +338,7 @@ All colors MUST be HSL.
     transform: translateY(100%);
     clip-path: inset(100% 0 0 0);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -343,6 +351,7 @@ All colors MUST be HSL.
     opacity: 0;
     transform: translateY(30px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -354,6 +363,7 @@ All colors MUST be HSL.
     opacity: 0;
     transform: translateY(20px) scale(0.95);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -362,18 +372,24 @@ All colors MUST be HSL.
 
 /* Enhanced gentle floating animation for hero */
 @keyframes gentleFloat {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-12px);
   }
 }
 
 @keyframes floatUp {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-15px);
   }
@@ -385,10 +401,12 @@ All colors MUST be HSL.
     opacity: 0;
     transform: rotateY(-30deg) scale(0.9);
   }
+
   50% {
     opacity: 0.7;
     transform: rotateY(15deg) scale(1.05);
   }
+
   100% {
     opacity: 1;
     transform: rotateY(0deg) scale(1);
@@ -396,9 +414,12 @@ All colors MUST be HSL.
 }
 
 @keyframes glow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
   }
+
   50% {
     box-shadow: 0 0 40px rgba(147, 51, 234, 0.6);
   }
